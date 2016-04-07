@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Fname:</strong>
+  <strong>Family Name:</strong>
   <%= @rsvp.fname %>
+</p>
+
+<p>
+  <strong>First Name:</strong>
+  <%= @rsvp.name %>
 </p>
 
 <p>
@@ -16,7 +21,7 @@
 </p>
 
 <p>
-  <strong>Number:</strong>
+  <strong>Phone Number:</strong>
   <%= @rsvp.number %>
 </p>
 
@@ -25,10 +30,6 @@
   <%= @rsvp.event %>
 </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @rsvp.name %>
-</p>
 
 <%= link_to 'Edit', edit_rsvp_path(@rsvp) %> |
 <%= link_to 'Back', rsvps_path %>

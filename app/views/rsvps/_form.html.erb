@@ -1,3 +1,6 @@
+<div class="col-lg-5">
+<div class="well bs-component">
+<legend><h1>RSVP Form</h1></legend>
 <%= form_for(@rsvp) do |f| %>
   <% if @rsvp.errors.any? %>
     <div id="error_explanation">
@@ -10,32 +13,53 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+      <span>Family Name</span>
+      <br>
+      <%= f.text_field :fname, class:"form-control", placeholder:"Family Name" %>
+      <br>
+  </div>
 
   <div class="field">
-    <%= f.label :fname %><br>
-    <%= f.text_field :fname %>
+      <span>First Name</span>
+      <br>
+      <%= f.text_field :name, class:"form-control", placeholder:"First Name" %>
+      <br>
   </div>
+  
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+      <span>Email</span>
+      <br>
+      <%= f.text_field :email, class:"form-control", placeholder:"Email" %>
+      <br>
   </div>
+    
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
+      <span>Address</span>
+      <br>
+      <%= f.text_field :address, class:"form-control", placeholder:"Address" %>
+      <br>
   </div>
+  
   <div class="field">
-    <%= f.label :number %><br>
-    <%= f.number_field :number %>
+      <span>Phone Number (without spaces or dashes) </span>
+      <br>
+      <%= f.number_field :number, class:"form-control", placeholder:"Phone Number" %>
+      <br>
   </div>
+  
   <div class="field">
-    <%= f.label :event %><br>
-    <%= f.text_field :event %>
+      <span>Event</span>
+      <br>
+      <%= f.text_field :event, class:"form-control", placeholder:"Event" %>
+      <br>
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+  
   <div class="actions">
-    <%= f.submit %>
+    <button type="reset" class="btn btn-warning">Clear</button>
+    <button type="submit" class="btn btn-success">Submit</button>
   </div>
 <% end %>
+</div>
+</div>
