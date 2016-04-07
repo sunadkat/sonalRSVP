@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nilay and Sonal</title>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+          
+<%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Home', welcome_index_path %></li>
+        <li><%= link_to 'Accommodation', welcome_accommodation_path %></li>
+        <li><%= link_to 'RSVP', new_rsvp_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Sign Up', new_registration_path(:user) %></li>
+        <li><%= link_to 'Log In', new_session_path(:user) %></li>
+        <li><%= link_to "Log Off", destroy_user_session_path, :method => :delete %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<%= yield %>
+
+</body>
+</html>
