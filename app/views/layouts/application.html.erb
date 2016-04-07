@@ -23,9 +23,13 @@
         <li><%= link_to 'RSVP', new_rsvp_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Sign Up', new_registration_path(:user) %></li>
-        <li><%= link_to 'Log In', new_session_path(:user) %></li>
-        <li><%= link_to "Log Off", destroy_user_session_path, :method => :delete %></li>
+        <% if !user_signed_in? %>
+            <li><%= link_to 'Sign Up', new_registration_path(:user) %></li>
+            <li><%= link_to 'Log In', new_session_path(:user) %></li>
+        <% end %>
+        <% if user_signed_in? %>
+            <li><%= link_to "Log Off", destroy_user_session_path, :method => :delete %></li>
+        <% end %>
       </ul>
     </div>
   </div>
