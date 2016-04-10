@@ -20,7 +20,12 @@
       <ul class="nav navbar-nav">
         <li><%= link_to 'Home', welcome_index_path %></li>
         <li><%= link_to 'Accommodation', welcome_accommodation_path %></li>
-        <li><%= link_to 'RSVP', new_rsvp_path %></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">RSVP <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to 'Wedding', new_rsvp_path %></li>
+          <li><%= link_to 'Reception', new_rsvp_path %></li>
+        </ul>
+      </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if !user_signed_in? %>

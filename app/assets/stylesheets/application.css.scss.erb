@@ -17,3 +17,21 @@
  *= require cosmo/bootswatch
  */
 
+body {
+    background-image: url(' <%= asset_url("trial3.jpg") %> ');
+    
+}
+
+div.transbox {
+    margin: 30px;
+    background-color: #cc6666;
+    border: 1px solid black;
+    opacity: 0.75;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
