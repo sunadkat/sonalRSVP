@@ -24,7 +24,7 @@
         <td><%= rsvp.name %></td>
         <td><%= rsvp.email %></td>
         <td><%= rsvp.address %></td>
-        <td><%= rsvp.number %></td>
+        <td><%= number_to_phone(rsvp.number, area_code: true) %></td>
         <td><%= rsvp.event %></td>
         <td><%= rsvp.attending %></td>
         <% if user_signed_in? %>

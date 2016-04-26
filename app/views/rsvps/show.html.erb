@@ -24,7 +24,7 @@
 
 <p>
   <strong>Phone Number:</strong>
-  <%= @rsvp.number %>
+  <%= number_to_phone(@rsvp.number, area_code: true)  %>
 </p>
 
 <p>
