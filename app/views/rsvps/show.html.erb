@@ -1,3 +1,5 @@
+<div class="col-lg-5">
+<div class="well bs-component">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -30,6 +32,13 @@
   <%= @rsvp.event %>
 </p>
 
+<p>
+  <strong>Number Attending:</strong>
+  <%= @rsvp.attending %>
+</p>
 
-<%= link_to 'Edit', edit_rsvp_path(@rsvp) %> |
-<%= link_to 'Back', rsvps_path %>
+
+<%= link_to 'Edit', edit_rsvp_path(@rsvp), class:"btn btn-warning" %>
+<%= link_to 'Confirm', rsvps_path, class:"btn btn-success" %>
+</div>
+</div>

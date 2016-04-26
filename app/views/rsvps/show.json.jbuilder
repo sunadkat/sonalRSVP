@@ -1,1 +1,1 @@
-json.extract! @rsvp, :id, :fname, :email, :address, :number, :event, :name, :created_at, :updated_at
+json.extract! @rsvp, :id, :fname, :name, :email, :address, :number, :event, :attending, :created_at, :updated_at
