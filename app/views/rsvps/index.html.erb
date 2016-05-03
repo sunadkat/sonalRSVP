@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
+
 <div class="col-lg-10">
 <div class="well bs-component">
+
+<% if user_signed_in? %>
+
 <h1>Listing Rsvps</h1>
 
 <table class="table table-striped table-hover ">
@@ -36,6 +40,14 @@
     <% end %>
   </tbody>
 </table>
+
+<% end %>
+
+<% if !user_signed_in? %>
+<p>You do not have permission to view this page.</p>
+
+<% end %>
+
 </div>
 </div>
 

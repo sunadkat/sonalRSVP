@@ -49,12 +49,11 @@
       <br>
   </div>
   
-  <div class="field">
-      <span>Event</span>
-      <br>
-      <%= f.text_field :event, class:"form-control", placeholder:"Event" %>
-      <br>
-  </div>
+<div class="field">
+<%= f.label :event %> 
+<%= f.select :event, [['Reception','Reception'],['Wedding', 'Wedding']] %> 
+</div>
+<br>
   
   <div class="field">
       <span>Number of People Attending </span>

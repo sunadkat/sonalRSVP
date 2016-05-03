@@ -18,15 +18,18 @@
  */
 
 body {
-    background-image: url(' <%= asset_url("indian_elephants_image1.jpg") %> ');
-    
+    background-image: url(' <%= asset_url("bgwhite.jpg") %> ');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+
 }
 
 div.transbox {
     margin: 30px;
     background-color: #faebd7;
     border: 1px solid black;
-    opacity: 0.9;
+    opacity: 0.8;
     filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
