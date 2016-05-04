@@ -39,6 +39,11 @@
 
 
 <%= link_to 'Edit', edit_rsvp_path(@rsvp), class:"btn btn-warning" %>
-<%= link_to 'Confirm', rsvps_path, class:"btn btn-success" %>
+<% if user_signed_in? %>
+  <%= link_to 'Confirm', rsvps_path, class:"btn btn-success" %>
+<% end %>
+<% if !user_signed_in? %>
+  <%= link_to 'Confirm', welcome_index_path, class:"btn btn-success" %>
+<% end %>
 </div>
 </div>

@@ -11,10 +11,10 @@ gem 'jbuilder'
 gem 'social-share-button', '~> 0.1.6'
 gem 'sdoc', group: :doc
 
-group :development, :test do
+group :development do
   gem 'sqlite3'
   gem 'byebug'
-  gem 'web-console'
+  gem 'web-console', '~> 2.0', platforms: [:ruby]
   gem 'spring'
 end
 

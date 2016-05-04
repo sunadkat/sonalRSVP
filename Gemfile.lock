@@ -212,7 +212,7 @@ DEPENDENCIES
   twitter-bootswatch-rails (~> 3.3.4)
   twitter-bootswatch-rails-helpers
   uglifier
-  web-console
+  web-console (~> 2.0)
 
 BUNDLED WITH
    1.11.2
