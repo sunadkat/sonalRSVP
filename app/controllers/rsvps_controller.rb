@@ -5,6 +5,11 @@ class RsvpsController < ApplicationController
   # GET /rsvps.json
   def index
     @rsvps = Rsvp.all
+    if params[:search]
+      @rsvps = Rsvp.search(params[:search]).order("created_at DESC")
+    else
+      @rsvps = Rsvp.all.order("created_at DESC")
+    end
   end
 
   # GET /rsvps/1

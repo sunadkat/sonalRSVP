@@ -5,4 +5,8 @@ class Rsvp < ActiveRecord::Base
     validates :number, numericality: true
     validates :fname, :name, format: {with: /\A[a-zA-Z]+\z/ }
     
+    def self.search(search)
+        where("event LIKE ?", "#{search}%") 
+    end
 end
+#"%#{search}%" old search
