@@ -29,7 +29,30 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+  
+  <% i = 0 %>
+  <% @rsvps.each do |rsvp| %>
+    <% if rsvp.event == "Wedding" %>
+      <% i = i + rsvp.attending %>
+    <% end %>
+  <% end %>
+  
+  <% j = 0 %>
+  <% @rsvps.each do |rsvp| %>
+    <% if rsvp.event == "Reception" %>
+      <% j = j + rsvp.attending %>
+    <% end %>
+  <% end %>
+  
+  <% if i != 0 %>
+    <p><b>Total Attending the Wedding: </b> &emsp;<%= i %> </p>
+  <% end %>
+  <% if j != 0 %>
+    <p><b>Total Attending the Reception: </b> &emsp;<%= j %></p>
+  <% end %>
+  
+  <br>
+  
   <tbody>
     <% @rsvps.each do |rsvp| %>
       <tr>
